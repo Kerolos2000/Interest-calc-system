@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="img/book-solid.svg" />
+  <title>نظام حساب فوائد الشهادات</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- main css file -->
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="custom-scrollbar" id="index">
+  <!-- main sec -->
+  <section id="main">
+    <div class="container pt-3 pb-3">
+      <h1 class="text-center mt-5">نظام حساب فوائد الشهادات</h1>
+      <form>
+        <div class="row row1">
+          <h2>معلومات الشهادة</h2>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputText1">المبلغ</label>
+            <input type="number" class="form-control" id="exampleInputNumber1" placeholder="المبلغ">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputNumber1">الفائدة</label>
+            <input type="number" class="form-control" id="exampleInputNumber2" placeholder="الفائدة">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputNumber2">مدة الشهادة</label>
+            <input type="number" class="form-control" id="exampleInputNumber3" placeholder="مدة الشهادة">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputDate1">تاريخ الشراء</label>
+            <input type="date" class="form-control" id="exampleInputDate1">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputSelect">حالة الشهادة</label>
+            <select class="form-control" id="exampleInputSelect">
+              <option value="true">مجددة</option>
+              <option value="false">غير مجددة</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row row2">
+          <h2>خدمات البحث</h2>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputSearch1">بحث عن شهادة تنتهى شهر</label>
+            <input type="month" class="form-control" id="exampleInputSearch1">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputSearch2">بحث عن شهادة بمبلغ</label>
+            <input type="number" class="form-control" id="exampleInputSearch2">
+          </div>
+          <div class="form-group mb-3 col-md-4 col-6">
+            <label for="exampleInputSearch3">بحث عن شهادة بفائدة</label>
+            <input type="number" class="form-control" id="exampleInputSearch3">
+          </div>
+        </div>
+      </form>
+      <button id="add" class="add btn purple mt-2">اضافة</button>
+      <button id="save" class="save btn white mt-2">حفظ</button>
+    </div>
+  </section>
+
+  <!-- result sec -->
+  <section id="result">
+      <div class="allSort row mb-3">
+        <div class="col-md-4">
+          <button id="sort1" class="btn white">
+            شهادات تنتهى هذا اليوم <i class="fa-solid fa-file-contract"></i>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button id="sort2" class="btn white">
+            شهادات تنتهى هذا الشهر <i class="fa-solid fa-file-contract"></i>
+          </button>
+        </div>
+        <div class="col-md-4">
+          <button id="sort3" class="btn white">
+            شهادات تنتهى هذه السنة <i class="fa-solid fa-file-contract"></i>
+          </button>
+        </div>
+      </div>
+      <div class="row">
+        <table class="table table-dark table-striped">
+          <thead>
+            <tr>
+              <td class="col">رقم الشهادة</td>
+              <td class="col">المبلغ</td>
+              <td class="col">الفائدة</td>
+              <td class="col">تاريخ الشراء</td>
+              <td class="col">تاريخ الاستحقاق</td>
+              <td class="col">حالة الشهادة</td>
+              <td class="col">العائد الشهرى</td>
+              <td class="col">عائد نهاية المدة</td>
+              <td class="col">العائد المحقق حتى الان</td>
+              <td class="col">تحديث</td>
+              <td class="col">حذف</td>
+            </tr>
+          </thead>
+          <tbody id="tbody" class="tbody">
+          </tbody>
+        </table>
+      </div>
+  </section>
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  <!-- main js file -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
